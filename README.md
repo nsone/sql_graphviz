@@ -5,7 +5,7 @@ visualization of a SQL schema dump.
 
 ## Using with docker and dot
 
-Only dependency is dot. Run `scripts/generate.sh` and provide your SQL on stdin. SVG is output to stdout.
+Only dependency is docker. Run `scripts/generate.sh` and provide your SQL on stdin. SVG is output to stdout.
 
 For example:
 
