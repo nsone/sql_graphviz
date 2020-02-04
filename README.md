@@ -3,6 +3,18 @@
 SQL Graphviz is a small python script that generates a [Graphviz](http://www.graphviz.org/)
 visualization of a SQL schema dump.
 
+## Using with docker and dot
+
+Only dependency is dot. Run `scripts/generate.sh` and provide your SQL on stdin. SVG is output to stdout.
+
+For example:
+
+```shell
+docker exec platform_data_1 pg_dump --schema-only -U ns1 ns1 > schema.sql
+scripts/generate.sh < schema.sql > graph.svg
+```
+
+
 ### Dependencies
 
 SQL Graphviz relies on [pyparsing](https://pypi.python.org/pypi/pyparsing/2.0.3) to grok
